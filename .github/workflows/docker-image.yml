@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./SDP-CICD-B
-          file: ./STUDENTAPI-SPRINGBOOT/backend.Dockerfile
+          file: ./SDP-CICD-B/backend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-backend:latest
 
@@ -35,6 +35,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./SDP-CICD-F
-          file: ./STUDENTAPI-REACT/frontend.Dockerfile
+          file: ./SDP-CICD-F/frontend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-frontend:latest
